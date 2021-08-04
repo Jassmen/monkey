@@ -1,0 +1,6 @@
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/splashDash/Logo.png
+  android: true
+  ios: true
+  android_disable_fullscreen: true
