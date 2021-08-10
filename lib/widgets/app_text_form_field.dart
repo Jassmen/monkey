@@ -24,8 +24,10 @@ class AppTextFormField extends StatelessWidget {
   final TextDirection? textDirection;
   final ValueChanged<String>? onChanged;
   final ValueChanged<String>? onSubmit;
+  final Function(String?)? onSave;
   final FormFieldValidator<String>? validator;
   final FloatingLabelBehavior? floatingLabelBehavior;
+  final TextEditingController? controller;
 
 
    AppTextFormField({
@@ -40,6 +42,8 @@ class AppTextFormField extends StatelessWidget {
       this.onTap,
       this.onSubmit,
       this.onChanged,
+      this.controller,
+      this.onSave,
       this.padding = 17,
       this.textAlign = TextAlign.start,
       this.isPassword= false,
@@ -48,12 +52,11 @@ class AppTextFormField extends StatelessWidget {
       this.textDirection = TextDirection.ltr,
       this.radius = 25,
       this.hintColor = kBlack12,
-      this.background ,
+      this.background = kGrey,
       this.borderColor = Colors.transparent
    });
 
-   var controller = TextEditingController();
-   String? getText;
+
 
    @override
   Widget build(BuildContext context) {
@@ -66,7 +69,7 @@ class AppTextFormField extends StatelessWidget {
       ),
       child: TextFormField(
         keyboardType:textInputType,
-        onSaved: (newValue) => getText=newValue.toString(),
+        onSaved: onSave,
         onTap: onTap,
         validator:validator,
         autofocus:autofocus,
@@ -74,6 +77,7 @@ class AppTextFormField extends StatelessWidget {
         textAlign: textAlign!,
         obscureText: isPassword,
         onFieldSubmitted: onSubmit,
+        controller: controller,
         decoration:InputDecoration(
           hintText: hintText,
           labelText: labelText,

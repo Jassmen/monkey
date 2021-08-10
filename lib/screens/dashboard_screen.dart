@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monkey/enum/enum_button.dart';
+import 'package:monkey/resources/enum_button.dart';
 import 'package:monkey/model/dashboard_mdel.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:monkey/widgets/index.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monkey/enum/index.dart';
+import 'package:monkey/resources/index.dart';
 import 'package:monkey/screens/login_screen.dart';
-import 'package:monkey/screens/signup_screen.dart';
+import 'package:monkey/screens/register_sreen.dart';
 import 'package:monkey/widgets/index.dart';
 
 import '../app_theme.dart';
@@ -21,8 +21,8 @@ class FirstScreen extends StatelessWidget {
             width: 1.sw,
             child: Stack(
               children: [
-                appImage('assets/splashDash/BackgroundObjects1.png'),
-                appImage('assets/splashDash/BackgroundObjects.png'),
+                appImage(AppImages.BACKGROUND_OBJECT_1),
+                appImage(AppImages.BACKGROUND_OBJECT),
               ],
             ),
           ),
@@ -36,10 +36,10 @@ class FirstScreen extends StatelessWidget {
                     height: 200.h,
                     width: 200.w,
                     margin: EdgeInsets.only(top: 40.h),
-                    child: appImage('assets/splashDash/Logo.png')),
+                    child: appImage(AppImages.LOGO)),
                 50.heightBox,
                 AppText(
-                  text: LoginStrategy.FirstPageD,
+                  text: AppStrings.FIRST_PAGE,
                   color: kBlack12,
                   fontSize: 12,
                   maxLine: 2,

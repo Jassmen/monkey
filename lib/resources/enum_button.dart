@@ -1,20 +1,22 @@
+import 'package:monkey/resources/app_strings.dart';
+
 enum ButtonNum{ google,facebook,create,login,send,next}
 
 extension ButtonEnum on ButtonNum{
   String get value{
     switch(this){
       case ButtonNum.facebook:
-        return 'Login with Facebook';
+        return AppStrings.LOGIN_FACEBOOK;
       case ButtonNum.google:
-        return 'Login with Google';
+        return AppStrings.LOGIN_GOOGLE;
       case ButtonNum.create:
-        return 'Create an account';
+        return AppStrings.CREATE_ACCOUNT;
       case ButtonNum.login:
-        return 'Login';
+        return AppStrings.LOGIN;
       case ButtonNum.send:
-        return 'Send';
+        return AppStrings.SEND;
       case ButtonNum.next:
-        return 'Next';
+        return AppStrings.NEXT;
 
     }
   }

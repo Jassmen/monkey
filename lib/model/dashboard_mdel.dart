@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:monkey/enum/dashboard_enum.dart';
+import 'package:monkey/resources/index.dart';
 
 class BoardingModel extends Equatable{
   final String? image;
@@ -15,16 +15,16 @@ class BoardingModel extends Equatable{
 
 List<BoardingModel> boardingList=[
   BoardingModel(
-      image: 'assets/splashDash/Find food you love vector.png',
-      title: DashStrategy.FindFood,
-      body: DashStrategy.FindFoodDetail),
+      image: AppImages.FIND_FOOD,
+      title: AppStrings.FIND_FOOD,
+      body: AppStrings.FIND_FOOD_DETAIL),
   BoardingModel(
-      image: 'assets/splashDash/Delivery vector.png',
-      title: DashStrategy.FastDelivery,
-      body:DashStrategy.FastDeliveryDetail),
+      image:AppImages.DELIVERY_VICTOR,
+      title: AppStrings.FAST_DELIVERY,
+      body:AppStrings.FAST_DELIVERY_DETAIL),
   BoardingModel(
-      image: 'assets/splashDash/Live tracking vector.png',
-      title: DashStrategy.LiveTracing,
-      body: DashStrategy.LiveTracingDetail),
+      image: AppImages.LIVE_TRACING,
+      title: AppStrings.LIVE_TRACING,
+      body: AppStrings.LIVE_TRACE_DETAIL),
 
 ];

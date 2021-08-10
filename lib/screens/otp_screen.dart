@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monkey/enum/index.dart';
+import 'package:monkey/resources/index.dart';
 import 'package:monkey/widgets/index.dart';
 
 import '../app_theme.dart';
@@ -56,14 +56,14 @@ class _OTPScreenState extends State<OTPScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       (.1.sh).heightBox,
-                      AppText(text: SignUpStrategy.OTP,
+                      AppText(text: AppStrings.OTP,
                       color: kBlack,
                       fontSize: 30,
                       maxLine: 2,textAlign: TextAlign.center,
                       ),
                       20.heightBox,
                       AppText(
-                        text: SignUpStrategy.OTPDetail,
+                        text: AppStrings.OTP_DETAIL,
                         color: kBlack12,maxLine: 2,
                         textAlign: TextAlign.center,),
                       30.heightBox,
@@ -81,9 +81,9 @@ class _OTPScreenState extends State<OTPScreen> {
 
   Row buildClickHereText(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.center,
-      children: [AppText(text: SignUpStrategy.OTPDidNotReceive,color: kBlack12,),
+      children: [AppText(text: AppStrings.OTP_DO_NOT_RECEIVE,color: kBlack12,),
         AppTextButton(onPressed: ()=> navigateAndFinish(context, SizedBox()),
-            child: AppText(text: SignUpStrategy.ClickHere, color: kPrimaryColor,fontWeight: FontWeight.w700,))],);
+            child: AppText(text: AppStrings.CLICK_HERE, color: kPrimaryColor,fontWeight: FontWeight.w700,))],);
   }
   
   

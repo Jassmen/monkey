@@ -6,4 +6,3 @@ export 'app_text_field.dart';
 export 'app_text_form_field.dart';
 export 'app_button.dart';
 export 'app_text_button.dart';
-export 'app_user_info_field.dart';
