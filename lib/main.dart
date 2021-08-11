@@ -2,15 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:monkey/app_theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monkey/screens/dashboard_screen.dart';
-import 'package:monkey/screens/first_screen.dart';
-import 'package:monkey/screens/home_screen.dart';
 import 'package:monkey/screens/login_screen.dart';
-import 'package:monkey/screens/new_password_screen.dart';
-import 'package:monkey/screens/otp_screen.dart';
-import 'package:monkey/screens/reset_password.dart';
 
-void main(){
+import 'api/api_service.dart';
+
+void main() {
+  ApiService.init();
   runApp(MyApp());
 }
 
@@ -19,18 +16,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp
-    ]);
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     return ScreenUtilInit(
-      designSize: Size(360,790),
-      builder: ()=> MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: appThemeData(),
-        home:LoginScreen()
-      )
-    );
+        designSize: Size(360, 790), builder: () => MaterialApp(debugShowCheckedModeBanner: false, theme: appThemeData(), home: LoginScreen()));
   }
-
-
 }
