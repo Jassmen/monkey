@@ -9,7 +9,7 @@ import 'package:monkey/widgets/index.dart';
 
 class LoginScreen extends StatelessWidget {
    LoginScreen();
-   TextEditingController _emailController = TextEditingController();
+   TextEditingController _mobileController = TextEditingController();
    TextEditingController _passwordController = TextEditingController();
    GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
               20.heightBox,
               AppText(text: AppStrings.ADD_YOUR_DETAIL_SIGNUP,color: kBlack12,textAlign: TextAlign.center,),
               30.heightBox,
-              _buildEmailInput(context),
+              _buildPhoneInput(context),
               20.heightBox,
               _buildPasswordInput(context),
               20.heightBox,
@@ -66,11 +66,11 @@ class LoginScreen extends StatelessWidget {
           );
   }
 
-  AppTextFormField _buildEmailInput(BuildContext context) {
+  AppTextFormField _buildPhoneInput(BuildContext context) {
     return AppTextFormField(
-            hintText: AppStrings.EMAIL,
-            validator: (value) => AppValidator.validatorEmail(value, context),
-            controller: _emailController,
+            hintText: AppStrings.MOBILE_NUMBER,
+            validator: (value) => AppValidator.validatorMobile(value,value, context),
+            controller: _mobileController,
           );
   }
 

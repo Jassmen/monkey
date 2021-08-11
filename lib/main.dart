@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monkey/screens/dashboard_screen.dart';
 import 'package:monkey/screens/first_screen.dart';
 import 'package:monkey/screens/home_screen.dart';
+import 'package:monkey/screens/login_screen.dart';
 import 'package:monkey/screens/new_password_screen.dart';
 import 'package:monkey/screens/otp_screen.dart';
 import 'package:monkey/screens/reset_password.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       builder: ()=> MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: appThemeData(),
-        home:HomeScreen()
+        home:LoginScreen()
       )
     );
   }

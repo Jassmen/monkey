@@ -12,6 +12,10 @@ class ApiPath{
   static const CustomerChangePassword  = _API+_Account+'/CustomerChangePassword';
 
 
+  static const UserNameLogin  = TokenGenerate+'?Username=';
+  static const Password  = '&Password=';
+
+
 
   static const ContactUs  = _API+'/ContactUs';
 
